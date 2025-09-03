@@ -41,3 +41,11 @@ public class PersonDTO {
       PhoneNumber = string.Empty;
    }
 }
+
+public class TransactionDTO {
+   public decimal Amount { get; set; }
+
+   public TransactionDTO() {
+      Amount = 0;
+   }
+}

@@ -29,4 +29,26 @@ app.MapPost("/api/person/addPerson", (PersonDTO personDTO) =>
     return Results.Created($"/api/person/{person.Id}", person);
 });
 
+app.MapPut("/api/person/updatePerson/{id}", (int id, PersonDTO updatedPersonDTO) =>
+{
+    var existingPerson = personService.GetPersonById(id);
+    if (existingPerson == null)
+    {
+        return Results.NotFound($"Person with Id {id} not found.");
+    }
+    Person person = personService.UpdatePerson(id, updatedPersonDTO);
+    return Results.Ok(person);
+});
+
+app.MapPut("/api/transaction/addBalance/{id}", (int id, TransactionDTO transactionDTO) =>
+{
+    var existingPerson = personService.GetPersonById(id);
+    if (existingPerson == null)
+    {
+        return Results.NotFound($"Person with Id {id} not found.");
+    }
+    Person person = personService.AddBalance(id, transactionDTO.Amount);
+    return Results.Ok(person);
+});
+
 app.Run();

@@ -20,19 +20,17 @@ public class PersonRepository
          return person;
       }
    
-      public void UpdatePerson(int id, Person updatedPerson)
+      public Person UpdatePerson(int id, Person updatedPerson)
       {
          var person = persons.FirstOrDefault(p => p.Id == id);
          if (person != null)
          {
-               person.Name = updatedPerson.Name;
-               person.Age = updatedPerson.Age;
-               person.Email = updatedPerson.Email;
-               person.PhoneNumber = updatedPerson.PhoneNumber;
-               person.AccountNumber = updatedPerson.AccountNumber;
-               person.Balance = updatedPerson.Balance;
-               person.DateOpened = updatedPerson.DateOpened;
+            person.Name = updatedPerson.Name;
+            person.Age = updatedPerson.Age;
+            person.Email = updatedPerson.Email;
+            person.PhoneNumber = updatedPerson.PhoneNumber;
          }
+         return person;
       }
    
       public void DeletePerson(int id)

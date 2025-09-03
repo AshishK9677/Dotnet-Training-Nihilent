@@ -32,8 +32,19 @@ public class PersonServices
       person.DateOpened = DateTime.Now;
       return personRepository.AddPerson(person);
    }
-   public void UpdatePerson(int id, Person updatedPerson)
+   public Person UpdatePerson(int id, PersonDTO updatedPersonDTO)
    {
-      personRepository.UpdatePerson(id, updatedPerson);
+      var existingPerson = personRepository.GetPersonById(id);
+      existingPerson.Name = updatedPersonDTO.Name;
+      existingPerson.Age = updatedPersonDTO.Age;
+      existingPerson.Email = updatedPersonDTO.Email;
+      existingPerson.PhoneNumber = updatedPersonDTO.PhoneNumber;
+      return personRepository.UpdatePerson(id, existingPerson);
+   }
+   public Person AddBalance(int id, decimal amount)
+   {
+      var existingPerson = personRepository.GetPersonById(id);
+      existingPerson.Balance += amount;
+      return personRepository.UpdatePerson(id, existingPerson);
    }
 }
