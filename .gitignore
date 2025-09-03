@@ -108,3 +108,6 @@ coverage/
 # Temporary files
 tmp/
 temp/
+
+#images
+*.png
