@@ -29,8 +29,11 @@ public class PersonRepository
             person.Age = updatedPerson.Age;
             person.Email = updatedPerson.Email;
             person.PhoneNumber = updatedPerson.PhoneNumber;
+            return person;
+         } else {
+            Person emptyPerson = new Person();
+            return emptyPerson;
          }
-         return person;
       }
    
       public void DeletePerson(int id)
