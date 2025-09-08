@@ -25,10 +25,7 @@ public class PersonRepository
          var person = persons.FirstOrDefault(p => p.Id == id);
          if (person != null)
          {
-            person.Name = updatedPerson.Name;
-            person.Age = updatedPerson.Age;
-            person.Email = updatedPerson.Email;
-            person.PhoneNumber = updatedPerson.PhoneNumber;
+            person = updatedPerson;
             return person;
          } else {
             Person emptyPerson = new Person();
