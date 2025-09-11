@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Red Rose Bouquet",
+    "price": 29.99,
+    "stock": 50,
+    "imageUrl": "https://unsplash.it/800/533?image=1"
+  },
+  {
+    "id": 2,
+    "name": "Sunflower Bunch",
+    "price": 19.99,
+    "stock": 30,
+    "imageUrl": "https://unsplash.it/800/533?image=2"
+  },
+  {
+    "id": 3,
+    "name": "Orchid Plant",
+    "price": 49.99,
+    "stock": 20,
+    "imageUrl": "https://unsplash.it/800/533?image=3"
+  },
+  {
+    "id": 4,
+    "name": "Mixed Spring Flowers",
+    "price": 39.99,
+    "stock": 40,
+    "imageUrl": "https://unsplash.it/800/533?image=4"
+  },
+  {
+    "id": 5,
+    "name": "Tulip Bouquet",
+    "price": 24.99,
+    "stock": 60,
+    "imageUrl": "https://unsplash.it/800/533?image=5"
+  }
+]

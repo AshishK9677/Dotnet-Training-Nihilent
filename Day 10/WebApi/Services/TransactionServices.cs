@@ -14,7 +14,7 @@ public class TransactionServices : ITransactionServices
          if (action == "add")
          {
             person.Balance += amount;
-         }  
+         }
          else if (action == "deduct")
          {
             person.Balance -= amount;

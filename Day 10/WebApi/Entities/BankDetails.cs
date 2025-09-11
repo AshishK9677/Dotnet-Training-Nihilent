@@ -2,7 +2,6 @@ namespace Entities;
 
 public class BankDetails
 {
-   public int Id { get; set; }
    public string AccountNumber { get; set; }
    public decimal Balance { get; set; }
    public DateTime DateOpened { get; set; }
@@ -19,4 +18,10 @@ public class TransactionDTO
    public int Id { get; set; }
    public decimal Amount { get; set; }
    public string Action { get; set; }
+
+   public TransactionDTO() {
+      Id = 0;
+      Amount = 0;
+      Action = string.Empty;
+   }
 } 

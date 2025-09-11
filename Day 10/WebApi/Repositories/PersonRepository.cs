@@ -10,6 +10,9 @@ public class PersonRepository : IPersonRepository
       return persons;
    }
    public Person? GetPersonById(int id) {
+      if (persons.Count == 0) {
+         return null;
+      }
       return persons.FirstOrDefault(p => p.Id == id);
    }
    public Person AddPerson(Person person) {
